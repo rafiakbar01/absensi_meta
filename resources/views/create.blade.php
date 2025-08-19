@@ -6,8 +6,8 @@
     <div class="row">
         <!-- Left Side - Form Attendance Info -->
         <div class="col-md-6">
-            <div class="card border-0 shadow-lg rounded-7 mb-4 bg-secondary bg-opacity-25 sticky-top" style="top: 20px; min-height: 76vh; margin-right: 1%">
-                <div class="card-body d-flex flex-column justify-content-start p-4">
+            <div class="card border-0 shadow-lg rounded-3 mb-4 bg-secondary bg-opacity-25 sticky-top" style="top: 20px; height: fit-content; margin-right: 1%">
+                <div class="card-body p-4">
                     <h3 class="text-primary fw-bold mb-2">FORM ATTENDENCE</h3>
                     <p class="text-muted mb-4 fs-5">MICO <span style="color: blue;">HIM</span><span style="color: red;">TECH</span> 2025</p>
                     
@@ -17,11 +17,6 @@
                             <span class="text-muted fs-5">TIME</span>
                         </div>
                         <p class="mb-4 ms-5 text-dark fs-4">08.00 - 12.00 WIB</p>
-                        <div class="text-center mb-3">
-                            <span class="text-muted fs-5">RUNDOWN</span>
-                        </div>
-                    
-                        <hr class="border-2 border-dark opacity-100 my-4">
                     </div>
                 </div>
             </div>
@@ -79,16 +74,13 @@
                                 <i class="fas fa-user text-primary me-2"></i>
                                 <span class="fw-bold">Nama Lengkap</span>
                             </label>
-                            <div class="input-group input-group-lg shadow-sm">
-                                <span class="input-group-text border-0 bg-light">
-                                    <!-- <i class="fas fa-user-circle text-primary"></i> -->
-                                </span>
+                            <div class="input-group input-group-lg shadow-sm rounded-3">
                                 <input type="text" 
-                                       class="form-control border-0 bg-light @error('nama') is-invalid @enderror" 
+                                       class="form-control border py-3 @error('nama') is-invalid @enderror" 
                                        id="nama" 
                                        name="nama" 
                                        value="{{ old('nama') }}" 
-                                       placeholder="Masukkan nama lengkap Anda"
+                                       placeholder="Masukkan nama lengkap"
                                        required>
                             </div>
                             @error('nama')
@@ -128,18 +120,16 @@
                         --> 
 
                         <!-- Email Field -->
-                        <div class="mb-4">
+                        <div class="mb-3">
                             <label for="email" class="form-label">
                                 <i class="fas fa-envelope text-primary me-2"></i>
                                 <span class="fw-bold">Email</span>
                             </label>
-                            <div class="input-group input-group-lg shadow-sm">
-                                <span class="input-group-text border-0 bg-light">
-                                    <!-- <i class="fas fa-at text-primary"></i> -->
-                                </span>
+                            <div class="input-group input-group-lg shadow-sm rounded-3">
                                 <input type="email" 
-                                       class="form-control border-0 bg-light @error('email') is-invalid @enderror" 
+                                       class="form-control border py-3 @error('email') is-invalid @enderror" 
                                        id="email" 
+                                       
                                        name="email" 
                                        value="{{ old('email') }}" 
                                        placeholder="Masukkan email Anda"
@@ -152,21 +142,18 @@
                             </div>
                             @enderror
                         </div>
-                         <div class="mb-4">
+                         <div class="mb-3">
                             <label for="no_telp" class="form-label">
                                 <i class="fas fa-phone text-primary me-2"></i>
                                 <span class="fw-bold">No Telepon</span>
                             </label>
-                            <div class="input-group input-group-lg shadow-sm">
-                                <span class="input-group-text border-0 bg-light">
-                                    <!-- <i class="fas fa-mobile-alt text-primary"></i> -->
-                                </span>
+                            <div class="input-group input-group-lg shadow-sm rounded-3">
                                 <input type="tel" 
-                                       class="form-control border-0 bg-light @error('no_telp') is-invalid @enderror" 
+                                       class="form-control border py-3 @error('no_telp') is-invalid @enderror" 
                                        id="no_telp" 
                                        name="no_telp" 
                                        value="{{ old('no_telp') }}" 
-                                       placeholder="Masukkan nomor telepon Anda"
+                                       placeholder="Masukkan nomor telepon"
                                        pattern="[0-9]{10,13}"
                                        required>
                             </div>
@@ -189,11 +176,11 @@
                                     <i class="fas fa-star text-primary me-2"></i>
                                     <span class="fw-bold">Minat Kamu Masuk TRPL</span>
                                 </label>
-                                <div class="input-group input-group-lg shadow-sm">
+                                <div class="input-group input-group-lg shadow-sm rounded-3">
                                     <span class="input-group-text border-0 bg-light">
-                                        <!-- <i class="fas fa-lightbulb text-primary"></i> -->
+                                        <i class="fas fa-lightbulb text-primary"></i>
                                     </span>
-                                    <select class="form-control border-0 bg-light @error('minat') is-invalid @enderror"
+                                    <select class="form-control border py-3 @error('minat') is-invalid @enderror"
                                             id="minat"
                                             name="minat"
                                             onchange="toggleCustomMinat(this.value)"
@@ -210,12 +197,12 @@
                                 </div>
                                 <!-- Custom Minat Input -->
                                 <div id="customMinatInput" class="mt-3" style="display: none;">
-                                    <div class="input-group input-group-lg shadow-sm">
+                                    <div class="input-group input-group-lg shadow-sm rounded-3">
                                         <span class="input-group-text border-0 bg-light">
-                                            <!-- <i class="fas fa-edit text-primary"></i> -->
+                                            <i class="fas fa-edit text-primary"></i>
                                         </span>
                                         <input type="text"
-                                            class="form-control border-0 bg-light"
+                                            class="form-control border py-3"
                                             id="customMinat"
                                             name="custom_minat"
                                             placeholder="Masukkan minat Anda"
